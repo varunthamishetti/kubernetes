@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: <servicename>
+  namespace: <namespacename>
+spec:
+  type: <servicetype>  #ClusterIP/NodePort/LoadBalancer/HeadLess
+  selector:
+    <key>: <value>
+  ports:
+  - port: <serviceport> #service port
+    targetPort: <containerport> #port of your container

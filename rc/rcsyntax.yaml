@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: <rc name>
+  labels:
+    key: value
+  namespace: <ns name>
+spec:
+  replicas: <no of replicas/pods>
+  template:  #pod information
+    metadata:
+      name: <pod name>
+      labels:
+        key: value
+    spec:
+     containers:
+     - name: <name of the container>
+       image: <image name>
+       ports:
+       - containerPort: <port of the container>
+       resources:
+         request:
+           cpu:
+           memory:
+         limits:
+           cpu:
+           memory:
+     
